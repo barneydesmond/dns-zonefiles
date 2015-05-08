@@ -1,0 +1,63 @@
+; mail stuff
+@			300	IN	MX	1	aspmx.l.google.com.
+@			300	IN	MX	5	alt1.aspmx.l.google.com.
+@			300	IN	MX	5	alt2.aspmx.l.google.com.
+@			300	IN	MX	10	aspmx2.googlemail.com.
+@			300	IN	MX	10	aspmx3.googlemail.com.
+mail			300	IN	CNAME	ghs.googlehosted.com.
+
+@			300	IN	TXT	"google-site-verification=6kMTvZa1-SBVhKCeiDkesN1Mc7qrarrKATCSIvNw1mY"
+@			300	IN	TXT	"v=spf1 include:_spf.google.com ~all"
+
+
+; physical boxes
+misaka			300	IN	A	202.4.224.29
+misaka			300	IN	AAAA	2407:7800:100:1c9:0:14:0:1
+
+yumi			300	IN	A	202.4.232.65
+yumi			300	IN	AAAA	2407:7800:100:1c9:0:14:b022:f5dd
+yumiko			300	IN	A	202.4.232.66		; IPMI
+
+sei			300	IN	A	110.173.155.51		; junketsu
+
+
+; nginx
+lastorder		300	IN	A	202.4.224.30
+lastorder		300	IN	AAAA	2407:7800:100:1c9:0:14:0:2
+
+; apache
+biribiri		300	IN	A	202.4.224.31
+biribiri		300	IN	AAAA	2407:7800:100:1c9:0:14:0:3
+
+
+
+
+; nginx
+moin                    300     IN       CNAME   lastorder.meidokon.net
+wiki                    300     IN       CNAME   lastorder.meidokon.net
+mion                    300     IN       CNAME   lastorder.meidokon.net
+furinkan                300     IN       CNAME   lastorder.meidokon.net
+j.furinkan              300     IN       CNAME   lastorder.meidokon.net
+
+
+; apache
+oldmagento.furinkan     300     IN       CNAME   biribiri.meidokon.net
+itemshop.furinkan       300     IN       CNAME   biribiri.meidokon.net
+nagi                    300     IN       CNAME   biribiri.meidokon.net
+despairfiles            300     IN       CNAME   biribiri.meidokon.net
+despair                 300     IN       CNAME   biribiri.meidokon.net
+mikanya                 300     IN       CNAME   biribiri.meidokon.net
+frontend                300     IN       CNAME   biribiri.meidokon.net
+kesakoi                 300     IN       CNAME   biribiri.meidokon.net
+
+qqc                     300     IN       A       202.4.224.48
+
+
+; main website, apache
+@                       300     IN       A       202.4.224.31
+@                       300     IN       AAAA    2407:7800:100:1c9:0:14:0:3
+www                     300     IN       CNAME   biribiri.meidokon.net
+
+
+; extra boxes
+utena                   300     IN       CNAME   yumi.meidokon.net
